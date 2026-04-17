@@ -1,0 +1,113 @@
+
+/* Reset & Font */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Body */
+body {
+    background: #f5f0f8;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background: #c2185b;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 30px;
+}
+
+header .logo {
+   font-size:80px;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+}
+
+header nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: bold;
+    transition: 0.3s;
+    font-size:50px;
+
+}
+
+header nav a:hover {
+    color: #ffccde;
+     font-size:60px;  
+}
+nav a.active {
+    color: yellow;
+    border-bottom: 3px solid yellow;
+}
+/* Feature Card */
+.feature {
+    background: #fff;
+    border-radius: 30px;
+    padding: 50px 50px;   /* ✅ FIXED */
+    margin-bottom: 60px;  /* ✅ FIXED */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: 0.3s;
+    position: relative;
+}
+
+/* Hover */
+.feature:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+/* Image inside card */
+.feature img {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+/* Heading */
+
+.features-section h1 {
+    text-align: center;
+    color: #c2185b;
+    font-size: 80px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 80px;
+}
+.feature h2 {
+    color: #c2185b;
+    margin-bottom: 20px;
+    font-size: 40px;
+}
+
+/* List */
+.feature ul {
+    padding-left: 30px;
+}
+
+.feature ul li {
+    margin-bottom: 10px;
+}
+.features-section {
+    max-width: 1000px;
+    margin: 60px auto;
+    padding: 40px;
+}
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 15px;
+    background: #c2185b;
+    color: white;
+}

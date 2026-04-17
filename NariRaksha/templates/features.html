@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Features - NariRaksha</title>
+    <!-- Features Page CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='features.css') }}">
+</head>
+<body>
+
+<header>
+    <a href="{{ url_for('home') }}" class="logo">NariRaksha</a>
+<nav>
+    <a href="{{ url_for('home') }}">Home</a>
+    <a href="{{ url_for('features') }}">Features</a>
+    <a href="{{ url_for('tips') }}">Safety Tips</a>
+    <a href="{{ url_for('contact') }}">Contact</a>
+    <a href="{{ url_for('logout') }}">Logout</a>
+</nav>
+</header>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+<main class="features-page">
+    <section class="features-section">
+        <h1>Features of NariRaksha</h1>
+
+        <div class="feature">
+            <h2>1. Emergency Alerts & SOS</h2>
+                <img src="{{ url_for('static', filename='sos.jpg') }}" alt="SOS">
+            <ul>
+                <li><strong>Panic Button:</strong> Instantly sends alerts with location to pre-set contacts.</li>
+                <li><strong>Auto-Dial Emergency Numbers:</strong> Calls police, fire, or ambulance automatically.</li>
+                <li><strong>Silent Alarm:</strong> Sends alerts without making a sound (useful in dangerous situations).</li>
+            </ul>
+        </div>
+
+        <div class="feature">
+            <h2>2. Real-Time Location Tracking</h2>
+                <img src="{{ url_for('static', filename='gps.png') }}" alt="Location">
+            <ul>
+                <li><strong>Live GPS Tracking:</strong> Trusted contacts can monitor user location in real-time.</li>
+                <li><strong>Geo-Fencing Alerts:</strong> Notify when entering high-risk or unsafe areas.</li>
+                <li><strong>Route Sharing:</strong> Share route with friends/family during travel.</li>
+            </ul>
+        </div>
+
+        <div class="feature">
+            <h2>3. Community & Social Safety</h2>
+            <img src="{{ url_for('static', filename='community.png') }}" alt="Community">
+            <ul>
+                <li><strong>Trusted Contact Network:</strong> Allow selection of family/friends to receive alerts.</li>
+                <li><strong>Nearby Safe Zones:</strong> Maps showing police stations, hospitals, or well-lit public areas.</li>
+                <li><strong>Community Reports:</strong> Users can report unsafe areas or incidents.</li>
+            </ul>
+        </div>
+
+        <div class="feature">
+            <h2>4. Safety Notifications</h2>
+            
+           <img src="{{ url_for('static', filename='notification.png') }}" alt="Notifications">
+            <ul>
+                <li><strong>Check-in Reminders:</strong> Periodic prompts to confirm safety.</li>
+                <li><strong>Unusual Behavior Alerts:</strong> Detect abnormal phone movement or lack of response.</li>
+                <li><strong>Travel Safety Tips:</strong> Notify users about high-risk areas or safety practices.</li>
+            </ul>
+        </div>
+
+        <div class="feature">
+            <h2>5. Personal Safety Tools</h2>
+            <img src="{{ url_for('static', filename='tools.png') }}" alt="Tools">
+            <ul>
+                <li><strong>Fake Calls:</strong> Trigger fake incoming call to escape uncomfortable situations.</li>
+                <li><strong>Audio/Video Recording:</strong> Quick record to capture evidence discreetly.</li>
+                <li><strong>Flashlight & Siren:</strong> For self-defense or drawing attention in emergencies.</li>
+            </ul>
+        </div>
+
+        <div class="feature">
+            <h2>6. Education & Awareness</h2>
+            <img src="{{ url_for('static', filename='education.png') }}" alt="Education">
+            <ul>
+                <li><strong>Safety Tutorials:</strong> Guides on self-defense, first aid, and emergency response.</li>
+                <li><strong>Legal Rights Information:</strong> Quick access to local laws regarding harassment/assault.</li>
+                <li><strong>Helpline Directory:</strong> Access to counseling, medical, and legal services.</li>
+            </ul>
+        </div>
+
+        <div class="feature">
+            <h2>7. Smart Integration</h2>
+            <img src="{{ url_for('static', filename='ai.png') }}" alt="AI">
+            <ul>
+                <li><strong>Wearable Device Alerts:</strong> Link with smartwatches or fitness bands for SOS signals.</li>
+                <li><strong>AI Risk Detection:</strong> Alerts when unusual movement patterns are detected (e.g., being followed).</li>
+                <li><strong>Offline Mode:</strong> Send SOS messages even without active internet using SMS.</li>
+            </ul>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2026 NariRaksha. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register - NariRaksha</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='register.css') }}">
+</head>
+<body>
+
+<header>
+    <a href="{{ url_for('home') }}" class="logo">NariRaksha</a>
+    <nav>
+        <a href="{{ url_for('home') }}">Home</a>
+        <a href="{{ url_for('features') }}">Features</a>
+        <a href="{{ url_for('tips') }}">Safety Tips</a>
+        <a href="{{ url_for('contact') }}">Contact</a>
+    </nav>
+</header>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+<main class="register-page">
+    <div class="register-container">
+        <h1>Create Account</h1>
+        <p>Join NariRaksha for your safety</p>
+
+        <form method="POST" action="{{ url_for('register') }}">
+
+            <div class="form-group">
+                <label>Full Name</label>
+                <input type="text" name="name" placeholder="Enter your name" required>
+            </div>
+
+            <div class="form-group">
+                <label>Email</label>
+                <input type="email" name="email" placeholder="Enter your email" required>
+            </div>
+
+            <div class="form-group">
+                <label>Password</label>
+                <input type="password" name="password" placeholder="Create password" required>
+            </div>
+
+            <div class="form-group">
+                <label>Confirm Password</label>
+                <input type="password" name="confirm_password" placeholder="Confirm password" required>
+            </div>
+
+            <button type="submit" class="btn-register">Register</button>
+        </form>
+
+        <p class="extra">
+            Already have an account?
+            <a href="{{ url_for('login') }}">Login</a>
+        </p>
+    </div>
+</main>
+
+<footer>
+    <p>© 2026 NariRaksha</p>
+</footer>
+
+</body>
+</html>

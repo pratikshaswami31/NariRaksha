@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Safety Tips & Features - NariRaksha</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='safety.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<header>
+    <a href="{{ url_for('home') }}" class="logo">NariRaksha</a>
+    <nav>
+        <a href="{{ url_for('home') }}">Home</a>
+        <a href="{{ url_for('features') }}">Features</a>
+        <a href="{{ url_for('tips') }}">Safety Tips</a>
+        <a href="{{ url_for('contact') }}">Contact</a>
+        <a href="{{ url_for('login') }}" class="btn">Login</a>
+    </nav>
+</header>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+<main class="safety-page">
+    <section class="safety-section">
+        <h1>Professional Safety Tips & Advanced Features</h1>
+
+        <!-- Emergency Features -->
+        <div class="feature-card">
+            <i class="fas fa-bell"></i>
+            <h2>Emergency Features</h2>
+            <ul>
+                <li><strong>SOS Button:</strong> Sends GPS location via SMS or email to trusted contacts.</li>
+                <li><strong>Emergency Call:</strong> One-click call to local police or helpline numbers.</li>
+                <li><strong>Fake Call:</strong> Simulate a call to escape unsafe situations.</li>
+            </ul>
+        </div>
+
+        <!-- Safety Resources -->
+        <div class="feature-card">
+            <i class="fas fa-shield-alt"></i>
+            <h2>Safety Resources</h2>
+            <ul>
+                <li><strong>Local Helplines:</strong> Police, hospitals, women’s NGOs.</li>
+                <li><strong>Self-defense Tips:</strong> Videos and infographics for quick learning.</li>
+                <li><strong>Legal Guidance:</strong> Understand laws on harassment, domestic violence, cybercrime.</li>
+            </ul>
+        </div>
+
+        <!-- Community & Support -->
+        <div class="feature-card">
+            <i class="fas fa-users"></i>
+            <h2>Community & Support</h2>
+            <ul>
+                <li><strong>Anonymous Forum / Chat:</strong> Share experiences safely.</li>
+                <li><strong>Buddy System:</strong> Pairing women for mutual safety awareness.</li>
+                <li><strong>Success Stories:</strong> Real-life safety victories to inspire users.</li>
+            </ul>
+        </div>
+
+        <!-- Educational Content -->
+        <div class="feature-card">
+            <i class="fas fa-book"></i>
+            <h2>Educational Content</h2>
+            <ul>
+                <li><strong>Awareness Articles:</strong> Cyberbullying, stalking, harassment tips.</li>
+                <li><strong>Safety Courses:</strong> Short tutorials & quizzes on personal safety.</li>
+                <li><strong>Workshops:</strong> Online registration for self-defense and legal awareness.</li>
+            </ul>
+        </div>
+
+        <!-- Location-Based Tools -->
+        <div class="feature-card">
+            <i class="fas fa-map-marker-alt"></i>
+            <h2>Location-Based Tools</h2>
+            <ul>
+                <li><strong>Safe Zones Map:</strong> Police stations, hospitals, and well-lit areas.</li>
+                <li><strong>Danger Alerts:</strong> Real-time notifications from other users.</li>
+                <li><strong>Travel Planner:</strong> Suggests safe routes for commuting.</li>
+            </ul>
+        </div>
+
+        <!-- Tech Integration -->
+        <div class="feature-card">
+            <i class="fas fa-mobile-alt"></i>
+            <h2>Technology Integration</h2>
+            <ul>
+                <li><strong>GPS Tracking:</strong> Share live location with trusted contacts.</li>
+                <li><strong>AI Chatbot:</strong> Safety guidance and emergency steps.</li>
+                <li><strong>Mobile-Friendly:</strong> Fast, simple interface for emergency use.</li>
+            </ul>
+        </div>
+
+        <!-- Awareness & Campaigns -->
+        <div class="feature-card">
+            <i class="fas fa-bullhorn"></i>
+            <h2>Awareness & Campaigns</h2>
+            <ul>
+                <li><strong>Daily Tips Widget:</strong> Quick safety tips on homepage.</li>
+                <li><strong>Social Sharing:</strong> Spread awareness through posts and infographics.</li>
+                <li><strong>Event Calendar:</strong> Campaigns, rallies, and webinars for safety awareness.</li>
+            </ul>
+        </div>
+
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2026 NariRaksha. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard - NariRaksha</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='dashboard.css') }}">
+</head>
+<body>
+
+<header>
+    <h1 class="logo">NariRaksha</h1>
+    <nav>
+     
+    <a href="{{ url_for('home') }}">Home</a>
+    <a href="{{ url_for('features') }}">Features</a>
+    <a href="{{ url_for('tips') }}">Safety Tips</a>
+    <a href="{{ url_for('contact') }}">Contact</a>
+    <a href="{{ url_for('logout') }}">Logout</a>
+
+    </nav>
+</header>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+<!-- DASHBOARD -->
+<section class="dashboard">
+
+    <!-- Show logged in user -->
+    <h2>Welcome {{ name }} 👋</h2>
+    <p>You are successfully logged in. Stay safe!</p>
+
+    <div class="dashboard-cards">
+
+     <div class="dash-card">
+
+    <h3>🚨 SOS Alert</h3>
+    <p>Send emergency alert to your trusted contacts instantly.</p>
+
+    <form action="{{ url_for('send_sos') }}" method="POST">
+
+        <input type="text" name="gate_number" placeholder="Enter Gate Number" required>
+
+        <!-- Hidden location -->
+        <input type="hidden" name="latitude" id="latitude">
+        <input type="hidden" name="longitude" id="longitude">
+
+        <button type="submit">🚨 Send SOS</button>
+
+    </form>
+
+</div>
+        <div class="dash-card">
+            <h3>📍 Live Location</h3>
+            <p>Share your real-time location with family or friends.</p>
+            <button onclick="shareLocation()">Share</button>
+        </div>
+
+        <div class="dash-card">
+            <h3>📞 Emergency Call</h3>
+            <p>Quickly call police or emergency helpline (100).</p>
+            <button onclick="makeCall()">Call</button>
+        </div>
+
+        <div class="dash-card">
+            <h3>🗺 Safe Zones</h3>
+            <p>Find nearby safe places like police stations and hospitals.</p>
+            <button onclick="showSafeZones()">View</button>
+        </div>
+
+        <div class="dash-card">
+            <h3>🤖 AI Alerts</h3>
+            <p>Get smart alerts based on your surroundings.</p>
+            <button onclick="aiAlert()">Check</button>
+        </div>
+
+        <div class="dash-card">
+            <h3>👥 Community</h3>
+            <p>Connect with community and report unsafe situations.</p>
+            <button onclick="openCommunity()">Open</button>
+        </div>
+
+    </div>
+
+</section>
+
+</body>
+</html>

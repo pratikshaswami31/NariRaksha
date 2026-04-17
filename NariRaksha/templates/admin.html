@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='admin.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h2>👩‍💻 Admin</h2>
+        <a href="/admin">Dashboard</a>
+        <a href="/logout">Logout</a>
+    </div>
+
+    <!-- Main -->
+    <div class="main">
+
+        <h1>📊 Dashboard</h1>
+
+        <!-- CARDS -->
+        <div class="cards">
+            <div class="card">
+                <h3>Total Users</h3>
+                <p>{{ users|length }}</p>
+            </div>
+
+            <div class="card">
+                <h3>SOS Alerts</h3>
+                <p>{{ sos_logs|length }}</p>
+            </div>
+        </div>
+
+        <!-- 📊 CHART -->
+        <div class="section">
+            <h2>📊 Analytics</h2>
+            <canvas id="myChart"></canvas>
+        </div>
+
+        <!-- 👤 USERS TABLE -->
+        <div class="section">
+            <h2>👤 Users</h2>
+
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Action</th>
+                </tr>
+
+                {% for user in users %}
+                <tr>
+                    <td>{{ user[0] }}</td>
+                    <td>{{ user[1] }}</td>
+                    <td>{{ user[2] }}</td>
+                    <td>
+                        <a href="/delete_user/{{ user[0] }}">❌ Delete</a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+
+        <!-- 🚨 SOS ALERTS TABLE -->
+        <div class="section">
+            <h2>🚨 SOS Alerts</h2>
+
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>Gate</th>
+                    <th>Location</th>
+                    <th>Time</th>
+                    <th>Action</th>
+                </tr>
+
+                {% for sos in sos_logs %}
+                <tr>
+                    <td>{{ sos[0] }}</td>
+                    <td>{{ sos[1] }}</td>
+                    <td>
+                        <a href="{{ sos[2] }}" target="_blank">📍 View</a>
+                    </td>
+                    <td>{{ sos[3] }}</td>
+                    <td>
+                        <a href="/delete_sos/{{ sos[0] }}"
+                           onclick="return confirm('Delete this SOS alert?')">
+                           ❌ Delete
+                        </a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+
+    </div>
+</div>
+
+<!-- 🔥 CHART SCRIPT (FIXED) -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const ctx = document.getElementById('myChart');
+
+    if (!ctx) return;
+
+    const labels = {{ dates | tojson | default([]) }};
+    const dataValues = {{ counts | tojson | default([]) }};
+
+    if (labels.length === 0) {
+        console.warn("No chart data");
+        return;
+    }
+
+    new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: labels,
+            datasets: [{
+                label: 'SOS Alerts',
+                data: dataValues,
+                borderWidth: 2,
+                tension: 0.4
+            }]
+        }
+    });
+
+});
+</script>
+
+</body>
+</html>

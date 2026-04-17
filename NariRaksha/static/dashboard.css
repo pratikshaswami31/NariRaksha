@@ -1,0 +1,152 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* BODY */
+body {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+                url("/static/image.jpg") no-repeat center center/cover;
+    color: white;
+    min-height: 100vh;
+}
+
+/* Header */
+header {
+    background: #c2185b;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 30px;
+}
+header .logo {
+     font-size:80px;
+     font-weight: bold;
+      color: #fff;
+      text-decoration: none;
+    }
+header nav a {
+     color: #fff;
+     text-decoration: none;
+     margin-left: 20px;
+     font-weight: bold;
+     transition: 0.3s;
+     font-size:60px;
+     }
+
+nav a.active {
+    color: yellow;
+    border-bottom: 5px solid yellow;
+}
+nav a:hover {
+    color: #ffccde;
+     font-size:60px;
+}
+/* DASHBOARD SECTION */
+.dashboard {
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.dashboard h2 {
+    font-size: 100px;
+    margin-bottom: 10px;
+}
+
+.dashboard p {
+    font-size: 60px;
+}
+
+/* CARDS */
+.dashboard-cards {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 50px;
+    flex-wrap: wrap;
+}
+
+/* CARD */
+.dash-card {
+    background: rgba(255,255,255,0.95);
+    color: #333;
+    padding: 50px;
+    width: 500px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+
+.dash-card:hover {
+    transform: translateY(-10px);
+}
+
+/* CARD TEXT */
+.dash-card h3 {
+    color: #c2185b;
+    margin-bottom: 10px;
+     font-size: 60px;
+}
+
+.dash-card p {
+    font-size: 30px;
+}
+.dash-card form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+    
+}
+
+.dash-card input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+     font-size: 30px;
+}
+
+.dash-card button {
+    background: #c2185b;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+     font-size: 60px;
+}
+
+.dash-card button:hover {
+    background: #a3154a;
+}
+/* BUTTON */
+.dash-card button {
+    margin-top: 15px;
+    padding: 10px 15px;
+    border: none;
+    background: #c2185b;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.dash-card button:hover {
+    background: #e91e63;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .dashboard h2 {
+        font-size: 30px;
+    }
+
+    .dash-card {
+        width: 90%;
+    }
+}

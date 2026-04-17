@@ -1,0 +1,142 @@
+/* ============================= */
+/* Contact Page CSS - contact.css */
+/* ============================= */
+
+/* Reset & Font */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Body */
+body {
+    background: #f9f0f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background: #c2185b;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 30px;
+}
+
+header .logo {
+    font-size:80px;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+}
+
+header nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: bold;
+    font-size: 50px;
+    transition: 0.3s;
+
+}
+
+header nav a:hover {
+     font-size:60px;
+    color: #ffccde;
+}
+nav a.active {
+    color: yellow;
+    border-bottom: 3px solid yellow;
+}
+/* Contact Section */
+.contact-section {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 0 30px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    padding: 60px;
+}
+
+.contact-section h1 {
+    text-align: center;
+    color: #c2185b;
+    margin-bottom: 15px;
+    font-size: 3.5rem;
+}
+
+.contact-section p {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2rem;
+    color: #555;
+}
+
+/* Form Styles */
+.contact-form .form-group {
+    margin-bottom: 20px;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+    font-size: 2.5rem;
+
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 2.5rem;
+
+    transition: border-color 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #c2185b;
+    outline: none;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+/* Submit Button */
+.btn-submit {
+    display: inline-block;
+    background: #c2185b;
+    color: #fff;
+    font-size: 2.5rem;
+
+    font-weight: bold;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-submit:hover {
+    background: #e91e63;
+}
+
+/* Footer */
+footer {
+    background: #c2185b;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 50px;
+    font-size: 2.5rem;
+}
+

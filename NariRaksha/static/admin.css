@@ -1,0 +1,135 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0f172a;
+    color: #e2e8f0;
+}
+
+/* Layout */
+.container {
+    display: flex;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 220px;
+    background: #020617;
+    height: 100vh;
+    padding: 20px;
+    position: fixed;
+     font-size:40px;
+}
+
+.sidebar h2 {
+    color: #22c55e;
+    text-align: center;
+     font-size:60px;
+}
+
+.sidebar a {
+    display: block;
+    color: #cbd5f5;
+    padding: 12px;
+    margin: 10px 0;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: 0.3s;
+    
+}
+
+.sidebar a:hover {
+    background: #22c55e;
+    color: black;
+     font-size:60px;
+}
+
+/* Main Content */
+.main {
+    margin-left: 240px;
+    padding: 20px;
+}
+
+/* Cards */
+.cards {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.card {
+    flex: 1;
+    background: #1e293b;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.card h3 {
+    margin: 0;
+    color: #22c55e;
+     font-size:60px;
+}
+
+.card p {
+    font-size: 30px;
+    margin-top: 10px;
+}
+
+/* Section Titles */
+h2 {
+    margin-top: 30px;
+    color: #22c55e;
+    font-size: 50px;
+}
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #1e293b;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+th, td {
+    padding: 30px 30px;
+    text-align: center;
+    border-bottom: 1px solid #334155;
+    color: white;
+    font-size: 30px;
+}
+
+th {
+    background: #22c55e;
+    color: black;
+}
+
+tr:hover {
+    background: #334155;
+}
+
+/* Buttons / Links */
+a {
+    color: #38bdf8;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Delete Button */
+a.delete {
+    color: red;
+}
+
+/* Chart Section */
+canvas {
+    background: #1e293b;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
